@@ -22,9 +22,24 @@
             );
           }
         }
+          const Button = ()=>{
+            return(
+              <button
+              onClick={()=>alert("You pressed a button!")}>
+              Button</button>
+            )
+          }
+          const Container = ()=>{
+              return (
+                <div>
+                  <Greeting/> 
+                  <Button />
+                </div>
+              )
+          }
   
         ReactDOM.render(
-          <Greeting />, document.getElementById('app')
+          <Container />, document.getElementById('app')
         );
      </script>
 </body>
