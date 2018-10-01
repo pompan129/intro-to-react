@@ -9,8 +9,7 @@
 </head>
 
 <body>
-  <div id="app">
-  </div>
+  <div id="app"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
@@ -18,16 +17,31 @@
   <script type="text/babel">
     class Greeting extends React.Component {
           render() {
-    return (
+            return (
               <div>
-                <h1>Hello {this.props.name}!</h1>
+                <h1>Hello World!</h1>
               </div>
             );
           }
         }
+          const Button = ()=>{
+            return(
+              <button
+              onClick={()=>alert("You pressed a button!")}>
+              Button</button>
+            )
+          }
+          const Container = ()=>{
+              return (
+                <div>
+                  <Greeting/> 
+                  <Button />
+                </div>
+              )
+          }
   
         ReactDOM.render(
-          <Greeting name="Bloc Student"/>, document.getElementById('app')
+          <Container />, document.getElementById('app')
         );
      </script>
 </body>
